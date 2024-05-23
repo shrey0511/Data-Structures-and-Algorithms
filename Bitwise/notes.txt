@@ -1,0 +1,6 @@
+For left shift operator :
+    for any b number of times that you shift ,value changes to : number * 2^b
+- Always remember numbers are stored as 1 and 0 only in computers , so to use as
+  binary just do '&' with 1
+- For pascal's triangle in every row , the values goes with 2^(n-1):
+    like for 3rd row , sum = 1 << (n-1) = 1 * 2^(n-1);
