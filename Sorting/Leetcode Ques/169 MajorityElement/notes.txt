@@ -1,0 +1,1 @@
+Moore's Voting algo is used for this one to maintain constant space and linear T.C

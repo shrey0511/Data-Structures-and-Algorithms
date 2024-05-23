@@ -1,0 +1,51 @@
+1) Bubble Sort --> Also known as Sinking sort or Exchange sort
+## Why?
+-- With the first pass the largest element came to the end
+-- And the second pass brings the second largest to the second index from last 
+
+## Stable Sorting?
+-- When the original order is maintained after sorting for the entities having the same value
+like originally the 10 that comes first , will be first in sorted order too
+Eg : Bubble sorting is Stable
+
+2) Selection Sort --> 
+-- Select a number and take it to its correct position (preferrably max one)
+
+3) Insertion Sort -->
+-- Sorting the array partially
+## Time complexity
+    Best: O(N) so linear
+-- Why use this? 
+## Adaptive: Steps are reduced if array is sorted, no. of steps reduced as compared to bubble sort
+## Stable
+## Works with smaller values of N : works well with partially sorted array
+
+4) Cycle Sort -->
+-- When given nos. from range 1 to N , use this
+-- After Sorting , index = (value of no.) - 1 
+-- 
+
+5) Merge Sort -->
+-- Divide and Conquer algo
+-- Split array into two halves
+-- Left and right halves are sorted and then merged
+# Complexity analysis : 
+    -- Time complexity : O(n*logn)   Space Complexity : O(N)
+# In-place sorting: 
+    If you are limited in memory then use this code which uses original array
+-- Better than Linked List as LL is not a continuous memory allocation
+
+6) Quick Sort ->
+-- Pivot: After first pass , 
+i) All elements less than pivot on the left side & vice-versa     
+ii) Pivot is now at the correct position
+-- Provides more efficiency than Merge Sort as it takes less space than that
+# Recurrence relation :
+    T(N) = T(K) + T(N-K-1) + O(N)
+-- Worst Case : When one part of array is empty
+-- Space and Time complexity : O(N^2)
+-- Best Case : Two equal halves 
+    T(N) = T(N/2) + T(N/2) + O(N) -> O(NlogN)
+
+7) Hybrid Sorting Algos ->
+-- Merge Sort + Insertion Sort (works well with partially sorted)
