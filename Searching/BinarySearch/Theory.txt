@@ -1,0 +1,9 @@
+## When to use?
+-> If there is a sorted array
+-> When we need to find a single solution following a certain pattern
+
+## Ceiling of a number : Smallest no. >= target no.
+## Floor of a number : Greatest no. <= target no.
+
+## For 2D arrays -- 
+-> As this is a large search space , always try to minimize it
