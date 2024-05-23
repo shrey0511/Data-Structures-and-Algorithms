@@ -1,0 +1,20 @@
+Singly Linked List:
+    Just a value and a next pointer
+
+Doubly Linked List:
+    A value , next and prev pointers
+    
+Circular Linked List:
+    Head and Tail are joined
+
+
+-- Use find function in all of them to get to a certain node using value or index
+
+-- Using recursion for insertion in LL
+    void return type & make changes in LL
+    Node return type that returns the list node to change the structure
+
+-- Fast & Slow pointers:
+    To be used with:
+        Cycle detection
+        Finding a node in a cycle etc.
