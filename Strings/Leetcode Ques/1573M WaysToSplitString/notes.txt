@@ -1,0 +1,5 @@
+-> If total ones is not divisible by 3 then equal split not possible
+-> Keep in mind the case of all 0s where 1s in every part are 0 so use the 
+    formula n*(n+1)/2...here n will be n-2 because if we take first 0 as split
+    then n-1-1 term remain
+-> Keep track of no. of ones if that crosses ones/3 then second split starts

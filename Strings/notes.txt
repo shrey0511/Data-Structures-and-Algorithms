@@ -1,0 +1,48 @@
+Strings:
+    # Any keyword starting with a capital letter is a class like String
+    # Placeholders for string in java:
+
+        Format Specifier	Conversion Applied
+                %%	        Inserts a % sign
+                %x %X	    Integer hexadecimal
+                %t %T	    Time and Date
+                %s %S	    String
+                %n	        Inserts a newline character
+                %o	        Octal integer
+                %f	     `  Decimal floating-point
+                %e %E	    Scientific notation
+                %g	        Causes Formatter to use either %f or %e,
+                            whichever is shorter
+                %h %H	    Hash code of the argument
+                %d	        Decimal integer
+                %c	        Character
+                %b %B	    Boolean
+                %a %A	    Floating-point hexadecimal
+
+    # Try printing :
+        -- 'a' + 'b'  -->   195
+        -- "a" + "b"  -->   ab
+        -- 'a' + 3    -->   100
+        -- (char)('a'+3) --> d
+        -- "a" + 1    -->   a1 //this is same as after a few steps: "a" + "1"
+                //integer will be converted to Integer that calls toString()
+    
+    # + operator only works for primitives or one of the objects should be string
+    # Performance of strings : Without stringBuilder each time new object : O(n2)
+    
+    # StringBuilder : 
+        StringBuilder builder = new StringBuilder();
+        //mutable
+        builder.append();
+        builder.toString();
+        builder.deleteCharAt(0);
+        builder.reverse();
+
+    # Methods:
+        .toCharArray()
+        .charAt()
+        .indexOf()
+        .lastIndex()
+        .strip()
+        .split()
+        etc

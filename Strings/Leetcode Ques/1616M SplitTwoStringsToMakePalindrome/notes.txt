@@ -1,0 +1,4 @@
+-> Here we first check how many common can be found from beginning of one string
+    and ending of the other and if the split is not in the middle then we 
+    need to check the middle elements are palindrome or not because
+    we need to split both strings at the same point
