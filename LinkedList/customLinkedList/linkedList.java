@@ -274,6 +274,17 @@ public class linkedList {
         }
     }
 
+    static Node middleNode(Node head) {
+        Node slow = head , fast = head;
+        while( fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //This works because when someone is twice your speed then
+        //by the time they reach the end, you are at the middle
+        return slow;
+    } 
+
     //Reverse LL using recursion
     private void reverseRecursion(Node node){
         if(node == tail){
@@ -287,7 +298,7 @@ public class linkedList {
     }
 
     //In-place reversal of LinkedList
-    private void reverse(){
+    private void reverseLL(){
 
         if(size < 2)
             return;
