@@ -237,5 +237,73 @@ public class linkedList {
         }
         return s;
     }
+
+    //For sorting the linked list
+    //We used mergeSort in ques 148
+    //Now using bubble Sort
+
+    private void bubbleSort(int row , int col){
+        if(row == 0)
+            return;
+
+        if(col < row){
+            Node first = get(col);
+            Node second = get(col + 1);
+
+            if(first.value > second.value){
+                if(first == head){
+                    head = second;
+                    first.next = second.next;
+                    second.next = first;
+                }else if(second == tail){
+                    Node prev = get(col - 1);
+                    prev.next = second;
+                    tail = first;
+                    first.next = null;
+                    second.next = tail;
+                }else{
+                    Node prev = get(col - 1);
+                    prev.next = second;
+                    first.next = second.next;
+                    second.next = first;
+                }
+            }
+            bubbleSort(row, col+1);
+        }else{
+            bubbleSort(row - 1, col);
+        }
+    }
+
+    //Reverse LL using recursion
+    private void reverseRecursion(Node node){
+        if(node == tail){
+            head = tail;
+            return;
+        }
+        reverseRecursion(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+    //In-place reversal of LinkedList
+    private void reverse(){
+
+        if(size < 2)
+            return;
+
+        Node prev = null;
+        Node pres = head;
+        Node next = pres.next;
+
+        while (pres != null){
+            pres.next = prev;
+            prev = pres;
+            pres = next;
+            if(next != null)
+                next.next = next;
+        }
+        head = prev;
+    }
     
 }
