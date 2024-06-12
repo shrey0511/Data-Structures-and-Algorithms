@@ -1,4 +1,4 @@
-//https://www.geeksforgeeks.org/check-if-pair-with-given-sum-exists-in-array/
+//https://leetcode.com/problems/3sum/
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,26 +8,6 @@ public class code {
     public static void main(String[] args) {
         
     }
-
-    static boolean hasArrayTwoCandidates(int arr[], int n, int x) {
-        // code here
-        if(n<=1) return false;
-        Arrays.sort(arr);
-        int l = 0 , r = n-1;
-        while(l < r){
-            if(arr[l]+arr[r] == x)
-                return true;
-            else if(arr[l]+arr[r] < x){
-                l++;
-            }else{
-                r--;
-            }
-        }
-        return false;
-    }
-
-    //3 sum
-    //https://leetcode.com/problems/3sum/
 
     static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
