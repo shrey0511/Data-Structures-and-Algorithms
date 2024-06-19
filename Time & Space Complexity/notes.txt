@@ -1,0 +1,33 @@
+
+-- What is Time complexity?
+    Function that tells us the relationship about how the time will grow as the input grows
+
+-- What do we consider when thinking about complexity?
+ 
+    Always look for worst case
+    Always look at complexity for large data
+    Always ignore less dominating terms
+
+    In recursive algorithms 
+    Space complexity: Height of tree 
+
+    Divide & Conquer recurrence 
+    Form: 
+    T(x) = a1T(b1x + E1(x)) + a2T(b2x + E2(x)) +.... + akT(bkn+Ek(x)) + g(x) for x>=x0
+
+    How to find complexity 
+        Plug and chug
+        Masters theorem
+
+        ** Akra bazzi formula
+        T(x) = Q(x^p + x^p integral 1 to x g(u)/u^(p+1)du)
+        Find p using this:
+            ai * (bi)^p = 1 , keep adding as many a's and b's are there
+
+        if(p < g(x) ki power) then take g(x) for your complexity
+
+-- Solving Linear recurrence
+    f(x) = E (i=1 to n) ai*f(x-i); n is fixed and it is order of recurrence
+
+    Fact: No. of roots we have = No. of answers you have already
+    
