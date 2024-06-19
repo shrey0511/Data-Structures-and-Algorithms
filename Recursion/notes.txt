@@ -1,0 +1,37 @@
+-- Recursion
+    Function that calls itselt and process terminates after reaching a certain state
+    As many times we call a function , its calls take up memory individually
+
+    Why recursion?
+        -- Helps us in solving bigger and complex problems in a simpler way
+        -- You can convert recursion solutions into iteration and vice versa
+        -- Space complexity : Not constant because of the recursive calls
+        -- When you can break down bigger prob into smaller parts
+
+    -- Recursion in a equation is called recurrence relation
+    -- When recursion call is the last step then it is tail recursion otherwise not,
+        if a function waits for a result in recursion call then not a tail.
+    
+    Steps to follow : 
+        1)Identify if the problem can be broken down into smaller parts
+        2)Write the recurrence relation
+        3)Draw the recurrence tree
+        4)About the tree:
+            See the flow of functions how they get into the stack
+            Identify the flow of left tree and right tree
+            Draw the tree and pointers again & again using pen and paper
+            Use a debugger to see the flow
+        5)See how & what type of values (int,string etc) are returned at each step.
+        6)See where the function call will come at the end and you will come out of main function
+        7)Make sure to return the required return type
+
+    Working with variables in recursion:
+        Arguments : Remember these will go to the next function call
+        Return type : 
+        Body of function : variables specific to that particular function call
+
+    Types of recurrence relation:
+        Linear (Repeated function calls)
+        Divide & Conquer(reduced by a factor) : More efficient
+
+    -- If 2 or more recursion calls are computing the same value then we use DP
