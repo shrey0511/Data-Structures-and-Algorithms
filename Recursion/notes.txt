@@ -35,3 +35,5 @@
         Divide & Conquer(reduced by a factor) : More efficient
 
     -- If 2 or more recursion calls are computing the same value then we use DP
+
+    -- When a choice can affect future answers then use backtracking
