@@ -1,0 +1,5 @@
+-- Used when we are putting stuff in order
+
+-- Situation like holding values , working with sequence or order
+
+-- Deque used in BFS DFS
