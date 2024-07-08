@@ -1,5 +1,8 @@
+import java.util.Stack;
+
 public class stackMain {
     public static void main(String[] args) throws stackException {
+        Stack<Integer> s1 = new Stack<>();
         dynamicStack s = new dynamicStack(4);
         s.push(0);
         s.push(2);
