@@ -1,0 +1,58 @@
+Trees : 
+
+Why?
+    -- Efficient inserting , deleting & finding (O(logn))
+    -- Ordered Storage
+    -- Cost effective : Systems that are less efficient we can use binary trees for that
+    -- Applications : 
+        File Systems , Databases , Algorithms : Networking , Maths , 
+        DecisionTrees , Compression Of files , Future DataStructures(heaps,graphs) etc
+
+Properties :
+    -- Size : Total number of Nodes
+    -- Child & Parent , Siblings
+    -- Edge
+    -- Height : Max Number of edges between two nodes(root & leaf nodes)
+    -- Leaf Nodes
+    -- Level : Subtract height of root - height of node . Eg: Level(root) = 0
+    -- Ancestor & Descendant
+
+Types of BinaryTrees :
+    -- Complete : All levels are full except the last one (last one filled from 
+        left without spaces)
+    -- Full/Strict : Each node has 0 or 2 children(Used in compression)
+        Segment trees imp for CP not interviews
+    -- Perfect : All levels are filled
+    -- Height balanced : Avg height -> O(logN)
+    -- Skewed : Every node has a single child
+    -- Ordered : Every node has a property , eg. BinarySearchTree
+    -- Degree : Children in the next level that the node has
+
+Properties that will help in question
+    -- Perfect Binary Tree : height = h
+        Total Nodes = 2^(h+1) - 1
+        Leaf Nodes = 2^h
+        Internal Nodes = 2^(h+1) - 1 - 2^h
+
+    -- If no. of leaves(N) are given then min. levels = logN + 1
+        If N nodes are given then min levels = log(N+1)
+
+    -- Strict BinaryTree : N leaf nodes then internal nodes = N-1
+        No. of leaf nodes = No. of internal nodes + 1
+
+    -- No. of leaf nodes = 1 + no. of internal nodes with 2 children(not including root)
+
+-- When the tree is unbalanced it can lead to O(N) and that is undesirable so to solve
+    we use a self balance Binary Tree
+
+-- It is also inefficient with sorted data
+
+Binary Search Tree : Nodes left side of root are smaller whereas the right ones are larger
+
+Implementation:
+    -- Linked representation : Binary Tree with empty children
+    -- Sequential : Using array
+        This is used whenever we dont have null values otherwise memory will be wasted
+        Like in heaps(Complete Binary Tree) and segment trees(Strict Binary Tree)
+
+    
