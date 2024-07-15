@@ -3,7 +3,8 @@ Trees :
 Why?
     -- Efficient inserting , deleting & finding (O(logn))
     -- Ordered Storage
-    -- Cost effective : Systems that are less efficient we can use binary trees for that
+    -- Cost effective : Systems that are less efficient we can use binary trees 
+                        for that
     -- Applications : 
         File Systems , Databases , Algorithms : Networking , Maths , 
         DecisionTrees , Compression Of files , Future DataStructures(heaps,graphs) etc
@@ -40,19 +41,73 @@ Properties that will help in question
     -- Strict BinaryTree : N leaf nodes then internal nodes = N-1
         No. of leaf nodes = No. of internal nodes + 1
 
-    -- No. of leaf nodes = 1 + no. of internal nodes with 2 children(not including root)
+    -- No. of leaf nodes = 1 + no. of internal nodes with 2 children(excluding root)
 
--- When the tree is unbalanced it can lead to O(N) and that is undesirable so to solve
-    we use a self balance Binary Tree
+-- When the tree is unbalanced it can lead to O(N) and that is undesirable so to 
+    solve we use a self balance Binary Tree(eg: AVL)
 
 -- It is also inefficient with sorted data
 
-Binary Search Tree : Nodes left side of root are smaller whereas the right ones are larger
+Binary Search Tree : Nodes left side of root are smaller whereas the right ones 
+    are larger.
+    Props:
+        Difference in height should <= 1 (Balanced) (For nodes on the same level)
+        but there are cases in which when it becomes unbalanced and therefore we 
+        we need SELF BALANCING TREE , eg : AVL
 
 Implementation:
     -- Linked representation : Binary Tree with empty children
     -- Sequential : Using array
-        This is used whenever we dont have null values otherwise memory will be wasted
-        Like in heaps(Complete Binary Tree) and segment trees(Strict Binary Tree)
+        This is used whenever we dont have null values otherwise memory will be 
+        wasted,eg: Heaps(Complete Binary Tree) and Segment trees(Strict Binary Tree)
 
-    
+Traversal Methods : 
+    1)Pre-Order : Node->Left->Right
+        When do we use:
+            Used for evaluating math expressions or making a copy
+            In serialization also(like converting string/array to binary tree)
+
+    2)In-Order : Left->Node->Right
+        When do we use:
+            If we use this in BST then we visit nodes in sorted manner
+
+    3)Post-Order : Left->Right->Node
+        When do we use:
+            Delete a binary tree (Take care of children first)
+            Bottom-up calculation
+
+    4)BFS : Level Order
+        When?
+            Answer lies near the root node
+            When asked to search by level
+            To check the code See the leetcode ques.102
+
+AVL(Adleson-Velski and Landis) : Tree is restructured with every insertion
+    Algo:
+        -- Insert node n normally
+        -- Start from n & find the node that makes the tree unbalanced(bottom-up)
+        -- Using one of the 4 rules , rotate & if we solve the unbalanced subTree
+            then whole tree becomes balanced
+
+    4 rules:
+        1)Left-Left (Straight line) : Just right rotate
+        2)Left-Right (Zig-Zag line) : LeftRotate for Straight & then just right rotate
+        3)Right-Right (Straight line) : Just left rotate
+        4)Right-Left (Zig-Zag line) : RightRotate for Straight & then just left rotate
+    Time Complexity : O(logN) since rotation only takes O(1)
+
+Segment Trees: Perform query/function on a range(sum,max,avg,min,prod)
+    O(N) not good enough , find O(logN) soln -> Segment Trees
+    It is a binary tree which has info about the intervals & operation 
+    Leaf node always one element
+    Disadv. Extra space
+    -- ST is a Full BinaryTree with:
+        N leaf nodes
+        N-1 internal nodes
+        2N-1 total nodes
+
+    How do we calc. the sum btw 2 indices or change the index 3 with the value 14 ?
+    -- Check if 3 lies in the interval [0,7] (Given)
+    -- if yes then check child nodes
+        if child range is out then no change just return
+    -- In the end you will reach leaf , update leaf and recursion will update tree
