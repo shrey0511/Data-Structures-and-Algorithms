@@ -64,15 +64,18 @@ Implementation:
 Traversal Methods : 
     1)Pre-Order : Node->Left->Right
         When do we use:
+            Do something in that level then go down
             Used for evaluating math expressions or making a copy
             In serialization also(like converting string/array to binary tree)
 
     2)In-Order : Left->Node->Right
         When do we use:
+        When we need the smaller values in BST
             If we use this in BST then we visit nodes in sorted manner
 
     3)Post-Order : Left->Right->Node
         When do we use:
+            If we need to perform function on root at the last
             Delete a binary tree (Take care of children first)
             Bottom-up calculation
 
