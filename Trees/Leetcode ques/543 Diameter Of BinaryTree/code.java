@@ -19,7 +19,7 @@ public class code {
         }
     }
 
-    //Googel , Amazon & Facebook question
+    //Google , Amazon & Facebook question
 
     int diameter = 0;
     public int diameterOfBinaryTree(TreeNode root) {
