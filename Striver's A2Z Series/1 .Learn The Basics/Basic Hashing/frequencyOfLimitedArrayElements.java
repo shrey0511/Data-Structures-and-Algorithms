@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class frequencyOfLimitedArrayElements{
     public static void main(String[] args) {
         
