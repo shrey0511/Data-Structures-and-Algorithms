@@ -22,7 +22,7 @@ public class mergeSort {
         int[] mix =  new int[left.length+right.length];
 
         int i=0,j=0,k=0;
-        while(i<left.length&&j<right.length){
+        while(i<left.length && j<right.length){
             if(left[i]<right[j]){
                 mix[k] = left[i];
                 i++;
