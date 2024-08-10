@@ -1,0 +1,9 @@
+1) Tabulation : Bottom-Up
+    Recursion is top-down and this one is bottom-up(Base case to the required)
+
+2) Memoization : Top-Down
+    -- Avoid overlaping subproblems using Memoization 
+    
+-- Understanding DP problem(When to use)
+    Counting total no. of ways
+    Try all possible ways
