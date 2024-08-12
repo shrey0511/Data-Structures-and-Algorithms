@@ -7,3 +7,4 @@
 -- Understanding DP problem(When to use)
     Counting total no. of ways
     Try all possible ways
+    When today's decision affects tomorrow then use DP not greedy
