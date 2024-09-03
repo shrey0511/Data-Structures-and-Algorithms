@@ -1,7 +1,7 @@
 //https://leetcode.com/problems/maximum-distance-in-arrays/?envType=daily-question&envId=2024-08-16
 
 import java.util.List;
-
+ 
 public class code {
     public static void main(String[] args) {
         
