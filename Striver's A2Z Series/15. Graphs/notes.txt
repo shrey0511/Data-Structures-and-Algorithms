@@ -1,0 +1,19 @@
+Degrees in Graph : 
+    For an undirected graph
+        No. of edges connected to a node
+        Total degree of a graph = 2 * no. of edges
+
+    For a directed graph
+        Outdegree : edges going out of that node
+        Indegree : edges going inside a node
+
+Edge Weight : 
+    If not assigned assume 1 for all
+
+Weighted graph:
+    If the edges are weighted then in the adj. array we assign those weighted values
+    Meanwhile for the arrayList: We store in pairs
+
+If the components are not connected just use a visited array to complete traversal
+
+DFS will require Recursion , BFS with queue
